@@ -17,7 +17,7 @@ spec:
       nodeSelector:
         "beta.kubernetes.io/os": linux
       containers:
-      - name: predictionservices_new
+      - name: predictionservicesnew
         image: gursin.azurecr.io/professionalpredictionservices:$(Build.BuildId)
         ports:
         - containerPort: 80
