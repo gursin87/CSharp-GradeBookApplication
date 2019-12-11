@@ -1,7 +1,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: predictionservices_new
+  name: predictionservices
 spec:
   replicas: 1
   strategy:
@@ -33,7 +33,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: predictionservices_new
+  name: predictionservices
 spec:
   type: LoadBalancer
   ports:
