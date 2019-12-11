@@ -1,7 +1,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: predictionservicesnew
+  name: predictionservices
 spec:
   replicas: 1
   strategy:
@@ -17,7 +17,7 @@ spec:
       nodeSelector:
         "beta.kubernetes.io/os": linux
       containers:
-      - name: predictionservicesnew
+      - name: predictionservices
         image: gursin.azurecr.io/gursin.azurecr.io:53
         ports:
         - containerPort: 80
@@ -33,10 +33,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: predictionservicesnew
+  name: predictionservices
 spec:
   type: LoadBalancer
   ports:
   - port: 80
   selector:
-    app: predictionservicesnew
+    app: predictionservices
