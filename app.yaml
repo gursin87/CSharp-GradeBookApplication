@@ -18,7 +18,7 @@ spec:
         "beta.kubernetes.io/os": linux
       containers:
       - name: predictionservicesnew
-        image: gursin.azurecr.io/professionalpredictionservices:$(Build.BuildId)
+        image: gursin.azurecr.io/gursin.azurecr.io:53
         ports:
         - containerPort: 80
         resources:
